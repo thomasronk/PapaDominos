@@ -13,6 +13,7 @@
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -45,18 +46,18 @@
 					<div class="col-sm-9">
 						<h2>CREATE YOUR ACCOUNT</h2>
 						<div class="login-form">
-							<form>
+							<form name="acc-regForm" method="" action="" id="acc-regForm">
 								<h4>Login details</h4>
-								<input type="email" placeholder="Email address(This will be your username)" id="field_email"/>
-								<input type="email" placeholder="Confirm email address" id="field_confirm_email"/>
-								<input type="password" placeholder="Password" id="field_pwd"/>
-								<input type="password" placeholder="Confirm Password" id="field_confirm_pwd"/>
+								<input type="email" placeholder="Email address(This will be your username)*" id="field_email" name="field_email"/>
+								<input type="email" placeholder="Confirm email address*" id="field_confirm_email" name="field_confirm_email"/>
+								<input type="password" placeholder="Password*" id="field_pwd" name="field_pwd"/>
+								<input type="password" placeholder="Confirm Password*" id="field_confirm_pwd" name="field_confirm_pwd"/>
 								<h4>Personal Details</h4>
-								<input type="text" placeholder="Full Name" id="field_name"/>
-								<input type="text" placeholder="Telephone Number" id="field_phone"/>
+								<input type="text" placeholder="Full Name*" id="field_name" name="field_name"/>
+								<input placeholder="Telephone Number*" id="field_phone" name="field_phone"/>
 								<h4>Location Details</h4>
 								<div class="col-sm-6">
-									<input type="text" placeholder="Street Address" id="field_streetname"/>
+									<input type="text" placeholder="Street Address*" id="field_streetname" name="field_streetname"/>
 								</div>
 								<div class="col-sm-2">
 									<select>
@@ -65,10 +66,10 @@
 									</select>
 								</div>
 								<div class="col-sm-4">
-									<input type="text" placeholder="APT/SUITE number" id="field_aptnum"/>
+									<input type="text" placeholder="APT/SUITE number*" id="field_aptnum" name="field_aptnum"/>
 								</div>
 								<div class="col-sm-6">
-									<input type="text" placeholder="City" id="field_city"/>
+									<input type="text" placeholder="City*" id="field_city" name=""/>
 								</div>
 								<div class="col-sm-2">
 									<select>
@@ -126,10 +127,10 @@
 									</select>
 								</div>	
 								<div class="col-sm-4">
-									<input type="text" placeholder="Zip Code" id="field_zip"/>
+									<input type="text" placeholder="Zip Code*" id="field_zip" name="field_zip"/>
 								</div>
 								<h4>Terms of Agreement</h4>
-								<input type="checkbox">Put checkbox here
+								<input type="checkbox" name="agreement">Put checkbox here
 								<div class="col-sm-2">
 									<button type="submit" class="btn btn-default">Submit</button>
 								</div>
@@ -306,6 +307,9 @@
 	<script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/validate-reg.js"></script>
+    
+	<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+	<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 </body>
 </html>
 	
