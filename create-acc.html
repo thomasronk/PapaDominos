@@ -46,7 +46,7 @@
 					<div class="col-sm-9">
 						<h2>CREATE YOUR ACCOUNT</h2>
 						<div class="login-form">
-							<form name="acc-regForm" method="" action="" id="acc-regForm">
+							<form name="acc-regForm" method="POST" action="http://localhost:8888/PapaDominos/php/new_account_reg.php" id="acc-regForm">
 								<h4>Login details</h4>
 								<input type="email" placeholder="Email address(This will be your username)*" id="field_email" name="field_email"/>
 								<input type="email" placeholder="Confirm email address*" id="field_confirm_email" name="field_confirm_email"/>
@@ -60,7 +60,7 @@
 									<input type="text" placeholder="Street Address*" id="field_streetname" name="field_streetname"/>
 								</div>
 								<div class="col-sm-2">
-									<select>
+									<select name="apt_suite" id="apt_suite">
 										<option value="apt">APT</option>
 										<option value="suite">SUITE</option>
 									</select>
@@ -69,10 +69,10 @@
 									<input type="text" placeholder="APT/SUITE number*" id="field_aptnum" name="field_aptnum"/>
 								</div>
 								<div class="col-sm-6">
-									<input type="text" placeholder="City*" id="field_city" name=""/>
+									<input type="text" placeholder="City*" id="field_city" name="field_city"/>
 								</div>
 								<div class="col-sm-2">
-									<select>
+									<select id="state" name="state">
 										<option value="AL">Alabama</option>
 										<option value="AK">Alaska</option>
 										<option value="AZ">Arizona</option>
@@ -134,7 +134,7 @@
 								<div class="col-sm-2">
 									<button type="submit" class="btn btn-default">Submit</button>
 								</div>
-								<div class="col-sm-2">
+								<div class="col-sm-2" id="reset">
 									<button type="reset" value="Reset">Reset</button>
 								</div>
 							</form>
