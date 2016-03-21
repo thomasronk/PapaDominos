@@ -27,4 +27,8 @@ $(document).ready(function(){
 	        zIndex: 2147483647 // Z-Index for the overlay
 		});
 	});
+
+	var x= document.cookie;
+	console.log(x);
+
 });

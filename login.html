@@ -13,11 +13,12 @@
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
@@ -86,9 +87,10 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="email" placeholder="Email address" />
-							<input type="password" placeholder="Password" />
+						<form name="acc-loginForm" id="acc-loginForm" method="POST" action="http://localhost:8888/PapaDominos/php/login_validate.php">
+							<input type="email" name="email" id="email" placeholder="Email address*" />
+							<input type="password" name="pwd" id="pwd" placeholder="Password*" />
+							<a href="#">Forgot password?</a>
 							<!--<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
@@ -277,5 +279,10 @@
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validate-login.js"></script>
+    <script src="js/js.cookie.js"></script>
+    
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+	<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 </body>
 </html>
