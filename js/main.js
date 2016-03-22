@@ -28,7 +28,16 @@ $(document).ready(function(){
 		});
 	});
 
-	var x= document.cookie;
-	console.log(x);
+	var original_cookie= document.cookie;
+	cook_array = original_cookie.split("=");
+
+	if(cook_array!=""){
+		$(".hello_user_header").text("Hello "+cook_array[1]);
+		$(".header_top").show();
+		console.log(cook_array[1]);
+	}
+	else{
+		$(".header_top").hide();
+	}
 
 });
