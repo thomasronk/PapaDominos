@@ -8,6 +8,50 @@ $(document).ready(function(){
 		$("#errorSpan").hide();
 	});
 
+	$('#field_pwd').keyup(function() {
+    	var pswd = $(this).val();
+    	var isComplex = 1;
+
+    	if ( pswd.length < 8 ) {
+	    	$('#length').removeClass('valid').addClass('invalid');
+	    	isComplex = 0;
+		} else {
+	   	 	$('#length').removeClass('invalid').addClass('valid');
+	   	 	isComplex = 1;
+		}
+
+		if ( pswd.match(/[A-z]/) ) {
+		    $('#letter').removeClass('invalid').addClass('valid');
+		    isComplex = 1;
+		} else {
+		    $('#letter').removeClass('valid').addClass('invalid');
+		    isComplex = 0;
+		}
+
+		//validate capital letter
+		if ( pswd.match(/[A-Z]/) ) {
+		    $('#capital').removeClass('invalid').addClass('valid');
+		    isComplex = 1;
+		} else {
+		    $('#capital').removeClass('valid').addClass('invalid');
+		    isComplex = 0;
+		}
+
+		//validate number
+		if ( pswd.match(/\d/) ) {
+		    $('#number').removeClass('invalid').addClass('valid');
+		    isComplex = 1;
+		} else {
+		    $('#number').removeClass('valid').addClass('invalid');
+		    isComplex = 0;
+		}
+
+	}).focus(function() {
+    	$('#pswd_info').show();
+	}).blur(function() {
+    	$('#pswd_info').hide();
+	});
+
 	jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
 	    phone_number = phone_number.replace(/\s+/g, ""); 
 		return this.optional(element) || phone_number.length > 9 &&

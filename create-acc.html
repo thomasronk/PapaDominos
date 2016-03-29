@@ -13,7 +13,9 @@
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/create-acc.css" rel="stylesheet">
 	<link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -51,6 +53,15 @@
 								<input type="email" placeholder="Email address(This will be your username)*" id="field_email" name="field_email"/>
 								<input type="email" placeholder="Confirm email address*" id="field_confirm_email" name="field_confirm_email"/>
 								<input type="password" placeholder="Password*" id="field_pwd" name="field_pwd"/>
+								<div id="pswd_info">
+								    <h4>Password must meet the following requirements:</h4>
+								    <ul>
+								        <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+								        <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+								        <li id="number" class="invalid">At least <strong>one number</strong></li>
+								        <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+								    </ul>
+								</div>
 								<input type="password" placeholder="Confirm Password*" id="field_confirm_pwd" name="field_confirm_pwd"/>
 								<h4>Personal Details</h4>
 								<input type="text" placeholder="Full Name*" id="field_name" name="field_name"/>
