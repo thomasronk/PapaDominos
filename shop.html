@@ -246,9 +246,6 @@
 						</div>
 					-->
 
-						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
-						</div><!--/shipping-->
 						
 					</div>
 				</div>
@@ -267,7 +264,7 @@
 										<img src="images/shop/product12.jpg" alt="" />
 										<h2>$56</h2>
 										<p>Easy Polo Black Edition</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<a href="" class="btn btn-default add-to-cart" data-toggle="modal" data-target="#testmodal" ><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 									<!--
 									<div class="product-overlay">
@@ -289,6 +286,33 @@
 								</div>
 								-->
 							</div>
+						</div>
+
+						<div id="testmodal" class="modal fade" role="dialog">
+						  <div class="modal-dialog">
+
+						    <!-- Modal content-->
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        <h4 class="modal-title">Modal Header</h4>
+						      </div>
+						      <div class="modal-body">
+						      	<form>
+
+						      		Quantity:<input type="text" name="quantity"><br>
+						      		<input type="radio" name="size" value="small"> Small<br>
+						      		<input type="radio" name="size" value="medium"> Medium<br>
+						      		<input type="radio" name="size" value="large"> Large<br>
+						      		<input type="submit" value="Submit">
+						      	</form>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+
+						  </div>
 						</div>
 
 						</div> <!--end of productlist div-->
