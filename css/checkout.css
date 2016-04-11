@@ -1,0 +1,14 @@
+body{
+    font-size: 20px;
+}
+
+.cost_div{
+	display:inline-block; 
+	background-color:gray; 
+	width:20%;
+}
+
+.payment_div{
+	display:inline-block; 
+	width:70%;
+}
