@@ -97,11 +97,14 @@ $(document).ready(function(){
 				data: $(form).serialize(),
 				dataType : "json",
 				success: function(data){
-                    if(data=="1"){
+                    if(data.success==1){
                     	$("#successfulSpan").show();
                     }
                     else{
                     	$("#errorSpan").show();
+                    	if(data.message==1062)
+                    		$("#errorSpan").text("Email ID already exists");
+                    	console.log(data.message);
                     }
                 }
 			})

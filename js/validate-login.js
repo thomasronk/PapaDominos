@@ -21,10 +21,14 @@ $(document).ready(function(){
                      console.log(data);
                      if(data.success==1){
                      	var username = data.username;
-                     	console.log("username is"+username);
+                     	var fullname = data.fullname;
+                     	var phone = data.phone;
                      	//Cookies.set('username', 'ron');
                      	document.cookie = "username="+username;
+                     	document.cookie = "fullname="+fullname;
+                     	document.cookie = "phone="+phone;
                      	window.location.replace("http://localhost:8888/PapaDominos/index.html");
+                     	//console.log(document.cookie);
             		 }
             		 else{
             		 	console.log("Invalid email and pwd cmbination");

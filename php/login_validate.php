@@ -7,7 +7,7 @@ $con = connect_db();
 $email= $_POST['email'];
 $pwd = $_POST['pwd'];
 
-$sql= "SELECT hash,full_name FROM users_reg WHERE email = '$email'";
+$sql= "SELECT hash,full_name,email,phone,street,apt_suite_num,city,state,zip FROM users_reg WHERE email = '$email'";
 $stmt = $con->query($sql); 
 $row =$stmt->fetchObject();
 
@@ -15,21 +15,31 @@ $row =$stmt->fetchObject();
 
 if ($pwd==$row->hash){
 	$success=1;
+	$username=$row->email;
 	$fullname = $row->full_name;
-	//setcookie('username', $_POST['username'], false);
-    //setcookie('password', md5($_POST['password']), false);
-    //header('Location:test.php');
+	$phone = $row->phone;
+	$street = $row->street;
+	$apt=$row->apt_suite_num;
+	$city=$row->city;
+	$state = $row->state;
+	$zip = $row->zip;
 }
 else{
 	$success=0;
-	//echo "Invalid Username and pwd!";
 
 }
 	 //echo json_encode($success);
 
 	 echo json_encode(array(
 	 	"success"=>$success,
-	 	"username"=>$fullname
+	 	"username"=>$username,
+	 	"fullname"=>$fullname,
+	 	"phone"=>$phone,
+	 	"street"=>$street,
+	 	"apt"=>$apt,
+	 	"city"=>$city,
+	 	"state"=>$state,
+	 	"zip"=>$zip
 	 	));
 
 ?>
