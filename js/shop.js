@@ -40,9 +40,11 @@ $(document).ready(function(){
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
 						      	+ '<form>'
-						      		+ '<input type=\x22radio\x22 name=\x22size\x22 value=\x22small\x22> Small $' + smallprice.toFixed(2) +'<br>'
-						      		+ '<input type=\x22radio\x22 name=\x22size\x22 value=\x22medium\x22> Medium $' + medprice.toFixed(2) +'<br>'
-						      		+ '<input type=\x22radio\x22 name=\x22size\x22 value=\x22large\x22> Large $' + largeprice.toFixed(2) +'<br>'
+						      		+ '<select name=\x22sizes\x22>'
+						      			+ '<option value=\x22small\x22> Small $' + smallprice.toFixed(2)
+						      			+ '<option value=\x22small\x22> Medium $' + medprice.toFixed(2)
+						      			+ '<option value=\x22small\x22> Large $' + largeprice.toFixed(2)
+						      		+ '</select>'
 						      		+ 'Quantity:<input type=\x22text\x22 name=\x22quantity\x22><br>'
 						      		+ '<input type=\x22submit\x22 value=\x22Confirm\x22>'
 						      	+ '</form>'
@@ -106,9 +108,11 @@ $(document).ready(function(){
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
 						      	+ '<form>'
-						      		+ '<input type=\x22radio\x22 name=\x22size\x22 value=\x22small\x22> Small $' + smallprice.toFixed(2) +'<br>'
-						      		+ '<input type=\x22radio\x22 name=\x22size\x22 value=\x22medium\x22> Medium $' + medprice.toFixed(2) +'<br>'
-						      		+ '<input type=\x22radio\x22 name=\x22size\x22 value=\x22large\x22> Large $' + largeprice.toFixed(2) +'<br>'
+						      		+ '<select name=\x22sizes\x22>'
+						      			+ '<option value=\x22small\x22> Small $' + smallprice.toFixed(2)
+						      			+ '<option value=\x22small\x22> Medium $' + medprice.toFixed(2)
+						      			+ '<option value=\x22small\x22> Large $' + largeprice.toFixed(2)
+						      		+ '</select>'
 						      		+ 'Quantity:<input type=\x22text\x22 name=\x22quantity\x22><br>'
 						      		+ '<input type=\x22submit\x22 value=\x22Confirm\x22>'
 						      	+ '</form>'
