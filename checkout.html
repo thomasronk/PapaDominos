@@ -296,9 +296,6 @@
 						<a href="#credit_debit" data-toggle="tab">Credit/Debit Card</a>
 					</li>
 					<li>
-						<a href="#paypal" data-toggle="tab">Paypal</a>
-					</li>
-					<li>
 						<a href="#cash" data-toggle="tab">Cash</a>
 					</li>
 				</ul>
@@ -307,15 +304,63 @@
 
 			<div class="tab-content">
 				<div class="tab-pane active" id="credit_debit">
-					This is the credit/debit card section
-				</div>
+					<br>
+					<form id="credit_debit_detail">
+						<div class="col-sm-6">
+							<label for="card_no">Card Number</label>
+							<input type="text" placeholder="Card Number*" id="card_no" name="card_no"/>
+						</div>
+						<div class="col-sm-6">
+							<label for="security_code">Security Code</label>
+							<input type="text" placeholder="Security Code*" id="security_code" name="security_code"/>
+						</div>
+						<br>
+						<div class="col-sm-8">
+							<label for="name_card">Name on Card</label>
+							<input type="text" placeholder="Name on Card*" id="name_card" name="name_card"/>
+						</div>
+						<div class="col-sm-5">
+							<label for="exp_month">Expiration Month</label>
+							<select id="exp_month" name="month">
+								<option value="Jan">January</option>
+								<option value="Feb">February</option>
+								<option value="Mar">March</option>
+								<option value="Apr">April</option>
+								<option value="May">May</option>
+								<option value="Jun">June</option>
+								<option value="Jul">July</option>
+								<option value="Aug">August</option>
+								<option value="Sept">September</option>
+								<option value="Oct">October</option>
+								<option value="Nov">November</option>
+								<option value="Dec">December</option>
+							</select>
+						</div>	
 
-				<div class="tab-pane" id="paypal">
-					This is the cpaypal section
+						<div class="col-sm-5">
+							<label for="exp_year">Expiration Year</label>
+							<select id="exp_year" name="year">
+								<option value="Jan">2016</option>
+								<option value="Feb">2017</option>
+								<option value="Mar">2018</option>
+								<option value="Apr">2019</option>
+								<option value="May">2020</option>
+								<option value="Jun">2021</option>
+								<option value="Jul">2022</option>
+								<option value="Aug">2023</option>
+							</select>
+						</div>
+
+						<div class="col-sm-8">
+							<label for="zip_card">ZipCode</label>
+							<input type="text" placeholder="ZipCode of card" id="zip_card" name="zip_card"/>
+						</div>
+					</form>
 				</div>
 
 				<div class="tab-pane" id="cash">
-					This is the cash section
+					<h4>Thanks!</h4>
+					<p>Just pay for the order when you come into our store or when its delivered!</p>
 				</div>
 			</div>
 		</div>
