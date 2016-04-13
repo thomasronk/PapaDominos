@@ -77,6 +77,7 @@
 						<div class="logo pull-left">
 							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
 						</div>
+						<!--
 						<div class="btn-group pull-right">
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
@@ -100,12 +101,15 @@
 								</ul>
 							</div>
 						</div>
+						-->
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
+								<!--
 								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
 								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
+								-->
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
@@ -155,7 +159,8 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" id="searcharg" placeholder="Enter product name"/>
+							<button id="searchbutton">Go</button>
 						</div>
 					</div>
 				</div>
@@ -274,64 +279,6 @@
 						
 						<div id="productlist"> <!--div holds all the products on page-->
 
-
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="images/shop/product12.jpg" alt="" />
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p>
-										<a href="" class="btn btn-default add-to-cart" data-toggle="modal" data-target="#testmodal" ><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<!--
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-									</div>
-									-->
-								</div>
-
-								<!--
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
-								</div>
-								-->
-							</div>
-						</div>
-
-						<div id="testmodal" class="modal fade" role="dialog">
-						  <div class="modal-dialog">
-
-						    <!-- Modal content-->
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal">&times;</button>
-						        <h4 class="modal-title">Modal Header</h4>
-						      </div>
-						      <div class="modal-body">
-						      	<form>
-
-						      		Quantity:<input type="text" name="quantity"><br>
-						      		<input type="radio" name="size" value="small"> Small<br>
-						      		<input type="radio" name="size" value="medium"> Medium<br>
-						      		<input type="radio" name="size" value="large"> Large<br>
-						      		<input type="submit" value="Submit">
-						      	</form>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-
-						  </div>
-						</div>
 
 						</div> <!--end of productlist div-->
 						
