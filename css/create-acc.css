@@ -42,3 +42,9 @@
     line-height:24px;
     color:#3a7d34;
 }
+
+#errorSpan{
+    color: #D8000C;
+    background-color: #FFBABA;
+    border-radius:.5em;
+}
