@@ -162,9 +162,12 @@ session_start();
 		                    exit;		
 	                        }
                             
+
                         
                          if(isset($_SESSION['cart']))
                          {   
+
+                            $total_price=0;
                          foreach ($_SESSION['cart'] as $item) 
                           {
                                
@@ -191,9 +194,17 @@ session_start();
 						    echo '<p>'.$item[1].'</p>' ;
 							echo '</td>' ;
 							echo '<td class="cart_total">' ;
-				            echo '<p class="cart_total_price">'.$item[2].'</p>' ;
+				            echo '<p class="cart_total_price">'.($item[2]*$item[1]).'</p>' ;
 							echo '</tr>'; 
+                            $total_price += ($item[2]*$item[1]);
                           }
+                            echo '<tr>';
+                            echo '<td class="cart_product"></td>';
+                            echo '<td class="cart_description"></td>' ;
+                            echo '<td class="cart_price"></td>' ;
+                            echo '<td class="cart_quantity"><p>Total Price</p></td>' ;
+                            echo '<td class="cart_total"><p class="cart_total_price">$'.$total_price.'</p></td>' ;
+
                        }
                         else
                         {
