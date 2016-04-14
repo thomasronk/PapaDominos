@@ -38,8 +38,8 @@ $(document).ready(function(){
                      	document.cookie = "city="+city;
                      	document.cookie = "state="+state;
                      	document.cookie = "zip="+zip;
-                     	window.location.replace("http://localhost:8888/PapaDominos/index.html");
-                     	//console.log(document.cookie);
+                     	window.location.replace("/PapaDominos/index.html");
+                     	//console.log(document.cookie); 
             		 }
             		 else{
             		 	console.log("Invalid email and pwd cmbination");
