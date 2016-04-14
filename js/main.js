@@ -29,14 +29,15 @@ $(document).ready(function(){
 	});
 
 	var original_cookie= document.cookie;
+	console.log(original_cookie);
 	
 	cookies_array = original_cookie.split(";");
 	console.log(cookies_array);
 
 	cook_array = cookies_array[0].split("=")
-	console.log(cook_array[1]);
+	console.log(cook_array[1] + " " + cook_array[0]);
 
-	if(cook_array!=""){
+	if(cook_array[0]=="username"){
 		$(".hello_user_header").text("Hello "+cook_array[1]);
 		$(".header_top").show();
 		//console.log(cook_array);

@@ -142,7 +142,10 @@ $(document).ready(function(){
 		cookies_array = original_cookie.split(";");
 		console.log(cookies_array);
 
-		if(cookies_array!="")
+		cook_array = cookies_array[0].split("=")
+		console.log(cook_array[1] + " " + cook_array[0]);
+
+		if(cook_array[0]=="username")
 		{
 
 			$("#member_login").hide();
