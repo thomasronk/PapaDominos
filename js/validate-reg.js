@@ -99,6 +99,8 @@ $(document).ready(function(){
 				success: function(data){
                     if(data.success==1){
                     	$("#successfulSpan").show();
+                    	window.location.replace("http://localhost:8888/PapaDominos/login.html");
+
                     }
                     else{
                     	$("#errorSpan").show();
