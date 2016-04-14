@@ -1,51 +1,32 @@
 <?php
 session_start(); 
-$quantity = $_POST['quantity'];
-if(isset($_SESSION['quantity']))
+
+if(isset($_SESSION['cart']))
 {
- //   $i = $_SESSION['counter'] ;
-//    $i += 1;
-    
-    echo $_POST['name'];
-     echo $_POST['size'];
-     echo $_POST['quantity'];
-    
-  /*  echo "set";
-    echo $i;
-    $_SESSION['counter'] = $i;
-    echo $_POST['size'];
-    echo $_POST['pasta'] ;*/
-    
-    
- /*   if(($_SESSION['quantity'])>1)
-    {
-        
-    }
-    
-    
-   if(isset($_POST['type']))
-   {
+   
+   
+    $items= array($_POST['name'],$_POST['quantity'],$_POST['size']);
+    array_push($_SESSION['cart'],$items);
+   
+    $_SESSION['counter'] += 1;  
        
-   }
-    else if(isset($_SESSION['pasta']))
-    {
-        
-    }
-    else if(isset($_SESSION['chocolate']))
-    {
-        
-    }
-    else
-    {
-        
-    } */
+    echo  $_SESSION['counter'] ;
 }
 else
 {
-    $_SESSION['quantity'] = $quantity;
-    $_SESSION['counter'] = 1;
-  /*  echo "not set" ;*/
+   $items= array($_POST['name'],$_POST['quantity'],$_POST['size']);
+   $_SESSION['cart']=array($items);
+   
+   $_SESSION['counter'] = 1;
+    
 }
+
+foreach ($_SESSION['cart'] as $item) {
+      echo $item[0];
+      echo $item[1];
+      echo $item[2];
+}
+
 
 //header('Location: http://localhost/papaDominos/menu.php?msg=Item added to cart');
 ?>
