@@ -28,5 +28,5 @@ foreach ($_SESSION['cart'] as $item) {
 }
 
 
-//header('Location: http://localhost/papaDominos/menu.php?msg=Item added to cart');
+header('Location: ../shop.html');
 ?>
