@@ -14,6 +14,7 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 	<link href="css/checkout.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -163,10 +164,12 @@
 				      
 				    </div>
   				</div>
-
+			</div>
 			</div>
 
 
+		<form name="acc-checkoutForm" method="POST" id="acc-checkoutForm">
+		<div class="container">
 			<div class="step-one">
 				<h2 class="heading">Personal Details</h2>
 			</div>
@@ -174,18 +177,22 @@
 			<div class="checkout-options">
 				<div class="col-sm-6">
 					<label for="email">Full Name</label>
-    				<input type="text" class="form-control" id="full_name_display">
+    				<input type="text" class="form-control" name="full_name_display" id="full_name_display">
     			</div>
+    			
     			<div class="col-sm-6">
     				<label for="email">Phone Number</label>
-    				<input type="" class="form-control" id="phone_display">
+    				<input type="" class="form-control" id="phone_display" name="phone_display">
 				</div>
+				<br><br>
 				<div class="col-sm-6">
 					<label for="email">Send Confirmation email to:</label>
-    				<input type="email" class="form-control" id="email_display">
+    				<input type="email" class="form-control" id="email_display" name="email_display">
     			</div>
+    			<br><br>
 			</div><!--/checkout-options-->		
 		</div>
+		
 
 		<div class="container">
 
@@ -194,25 +201,25 @@
 					<h2 class="heading">Which one would you prefer:</h2>
 			</div>
 
-			<div>
+			<!--<div>-->
 				<a class="btn btn-primary btn-lg" id="delivery" >Delivery</a>
 				 <a class="btn btn-primary btn-lg" id="carryout" >Carryout</a>
 
 				<div id="delivery_address" class="collapse">
-					<form name="acc-regForm" method="POST" id="acc-regForm">
+					
 					<br>
-						<div class="col-sm-5">
+						<div class="col-sm-6">
 							<label for="street">Street</label>
 							<input type="text" placeholder="Street Address*" id="field_streetname" name="field_streetname"/>
 						</div>
-						<div class="col-sm-5">
+						<div class="col-sm-6">
 							<label for="apt_suite">APT/Suite Number</label>
 							<input type="text" placeholder="APT/SUITE number*" id="field_aptnum" name="field_aptnum"/>
-						</div>
+						</div><br><br>
 						<div class="col-sm-6">
 							<label for="city">City</label>
 							<input type="text" placeholder="City*" id="field_city" name="field_city"/>
-						</div>
+						</div><br><br>
 						<div class="col-sm-6">
 							<select id="state" name="state">
 								<option value="AL">Alabama</option>
@@ -272,13 +279,13 @@
 							<label for="zip">Zip Code</label>
 							<input type="text" placeholder="Zip Code*" id="field_zip" name="field_zip"/>
 						</div>
-					</form>
+					
 				</div>
 
 				<div id="carryout_address" class="collapse">
 					insert carryout adddress here
 				</div> 
-			</div>
+			<!--</div>-->
 	
 			<hr>
 		</div>
@@ -305,7 +312,7 @@
 			<div class="tab-content">
 				<div class="tab-pane active" id="credit_debit">
 					<br>
-					<form id="credit_debit_detail">
+					
 						<div class="col-sm-6">
 							<label for="card_no">Card Number</label>
 							<input type="text" placeholder="Card Number*" id="card_no" name="card_no"/>
@@ -313,12 +320,12 @@
 						<div class="col-sm-6">
 							<label for="security_code">Security Code</label>
 							<input type="text" placeholder="Security Code*" id="security_code" name="security_code"/>
-						</div>
-						<br>
-						<div class="col-sm-8">
+						</div><br><br>
+						
+						<div class="col-sm-6">
 							<label for="name_card">Name on Card</label>
 							<input type="text" placeholder="Name on Card*" id="name_card" name="name_card"/>
-						</div>
+						</div><br><br>
 						<div class="col-sm-5">
 							<label for="exp_month">Expiration Month</label>
 							<select id="exp_month" name="month">
@@ -350,12 +357,14 @@
 								<option value="Aug">2023</option>
 							</select>
 						</div>
+							<br><br><br>
 
 						<div class="col-sm-8">
 							<label for="zip_card">ZipCode</label>
 							<input type="text" placeholder="ZipCode of card" id="zip_card" name="zip_card"/>
 						</div>
-					</form>
+
+					
 				</div>
 
 				<div class="tab-pane" id="cash">
@@ -371,13 +380,14 @@
 
 		<hr>
 		</div>
-
 		<div class=container>
 			<div>
-				<button class="btn btn-primary btn-lg">Submit Order</button>
+				<input type="submit" class="btn btn-primary btn-lg" id="submit_order"/>
 				<button class="btn btn-primary btn-lg">Review Order</button>
 			</div>
 		</div>
+		</form>
+
 	</section> <!--/#cart_items-->
 
 	
@@ -388,6 +398,9 @@
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/checkout.js"></script>
+
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+	<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 
 </body>
 </html>

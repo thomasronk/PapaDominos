@@ -73,12 +73,74 @@ $(document).ready(function(){
 		}
 	});
 
+	jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+	    phone_number = phone_number.replace(/\s+/g, ""); 
+		return this.optional(element) || phone_number.length > 9 &&
+			phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+	}, "Please specify a valid phone number");
+
+
+	$("#acc-checkoutForm").validate({
+		rules:{
+			full_name_display:{
+				required:true
+			},
+			email_display:{
+				required:true,
+				email:true
+			},
+			phone_display:{
+				required:true,
+				phoneUS:true
+			},
+			field_streetname:{
+				required:true
+			},
+			field_aptnum:{
+				required:true
+			},
+			field_city:{
+				required:true
+			},
+			field_zip:{
+				required:true
+			},
+			card_no:{
+				required:true
+			},
+			security_code:{
+				required:true
+			},
+			name_card:{
+				required:true
+			},
+			zip_card:{
+				required:true
+			}
+		},
+		messages:{
+			field_confirm_email:{
+				equalTo:"Emails do not match"
+			}
+		},
+		submitHandler: function(form) {
+				if(document.cookie!=""){
+				console.log("cookie not empty");
+			}
+			else{
+				console.log("cookie empty");
+				window.location.replace("http://localhost:8888/PapaDominos/order_complete.html");
+			}
+ 		 }
+	});
+
+
 	function checkCookie() {
 
 		var original_cookie= document.cookie;
 		
 		cookies_array = original_cookie.split(";");
-		//console.log(cookies_array);
+		console.log(cookies_array);
 
 		if(cookies_array!="")
 		{
