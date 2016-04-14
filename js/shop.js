@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 		//console.log("signout now!");
 		deleteAllCookies();
-		window.location.replace("http://localhost:8888/PapaDominos/index.html");
+		window.location.replace("../index.html");
 
 	});
 
@@ -83,7 +83,7 @@ $(document).ready(function(){
 							        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 							      + '</div>'
 							      + '<div class=\x22modal-body\x22>'
-							      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+							      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 							      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 							      		+ 'Size <select name=\x22size\x22>'
 							      			+ '<option value=\x22' + smallprice.toFixed(2) + '\x22> Small $' + smallprice.toFixed(2)
@@ -135,7 +135,7 @@ $(document).ready(function(){
 							        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 							      + '</div>'
 							      + '<div class=\x22modal-body\x22>'
-							      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+							      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 							      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 							      		+ '<input type=\x22hidden\x22 name=\x22size\x22 value=\x22' + medprice.toFixed(2) + '\x22><br>'
 							      		+ 'Quantity <select name=\x22quantity\x22>'
@@ -222,7 +222,7 @@ $(document).ready(function(){
 						        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
-						      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+						      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 						      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 						      		+ 'Size <select name=\x22size\x22>'
 						      			+ '<option value=\x22' + smallprice.toFixed(2) + '\x22> Small $' + smallprice.toFixed(2)
@@ -303,7 +303,7 @@ $(document).ready(function(){
 						        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
-						      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+						      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 						      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 						      		+ 'Size <select name=\x22size\x22>'
 						      			+ '<option value=\x22' + smallprice.toFixed(2) + '\x22> Small $' + smallprice.toFixed(2)
@@ -384,7 +384,7 @@ $(document).ready(function(){
 						        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
-						      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+						      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 						      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 						      		+ '<input type=\x22hidden\x22 name=\x22size\x22 value=\x22' + medprice.toFixed(2) + '\x22><br>'
 						      		+ 'Quantity <select name=\x22quantity\x22>'
@@ -461,7 +461,7 @@ $(document).ready(function(){
 						        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
-						      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+						      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 						      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 						      		+ '<input type=\x22hidden\x22 name=\x22size\x22 value=\x22' + medprice.toFixed(2) + '\x22><br>'
 						      		+ 'Quantity <select name=\x22quantity\x22>'
@@ -538,7 +538,7 @@ $(document).ready(function(){
 						        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
-						      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+						      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 						      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 						      		+ '<input type=\x22hidden\x22 name=\x22size\x22 value=\x22' + medprice.toFixed(2) + '\x22><br>'
 						      		+ 'Quantity <select name=\x22quantity\x22>'
@@ -615,7 +615,7 @@ $(document).ready(function(){
 						        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
-						      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+						      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 						      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 						      		+ '<input type=\x22hidden\x22 name=\x22size\x22 value=\x22' + medprice.toFixed(2) + '\x22><br>'
 						      		+ 'Quantity <select name=\x22quantity\x22>'
@@ -692,7 +692,7 @@ $(document).ready(function(){
 						        + '<h4 class=\x22modal-title\x22>' + data[i+1] + '</h4>'
 						      + '</div>'
 						      + '<div class=\x22modal-body\x22>'
-						      	+ '<form action=\x22http://localhost/papaDominos/php/updatecart.php\x22 method=\x22POST\x22>'
+						      	+ '<form action=\x22php/updatecart.php\x22 method=\x22POST\x22>'
 						      		+ '<input type=\x22hidden\x22 name=\x22name\x22 value=\x22' + data[i+1] + '\x22><br>'
 						      		+ '<input type=\x22hidden\x22 name=\x22size\x22 value=\x22' + medprice.toFixed(2) + '\x22><br>'
 						      		+ 'Quantity <select name=\x22quantity\x22>'
