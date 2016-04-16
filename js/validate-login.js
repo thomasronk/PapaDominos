@@ -38,7 +38,7 @@ $(document).ready(function(){
                      	document.cookie = "city="+city;
                      	document.cookie = "state="+state;
                      	document.cookie = "zip="+zip;
-                     	window.location.replace("http://localhost:8888/PapaDominos/index.html");
+                     	window.location.replace("/PapaDominos/index.html");
                      	//console.log(document.cookie);
             		 }
             		 else{
