@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type = "text/javascript" src="js/admin.js"></script>
+	</head>
+
+	<body>
+		<h1>Manage Menu</h1>
+
+		<div id="menu">
+
+
+		</div>
+
+		<div>
+			<h2>Add a new item</h2>
+			<form action="php/adminC.php" method="post">
+				ID: <input type="text" name="id"><br>
+				Name: <input type="text" name="name"><br>
+				Category:
+				<select name="category">
+					<option value = "pizza"> Pizza</option>
+					<option value = "pasta"> Pasta</option>
+					<option value = "sandwich"> Oven Baked Sandwiches</option>
+					<option value = "chicken"> Chicken</option>
+					<option value = "side"> Sides</option>
+					<option value = "drink"> Drinks</option>
+					<option value = "dessert"> Desserts</option>
+				</select>
+				<br>
+				Price: <input type="text" name="price"></br>
+				Description: <input type="text" name="description"></br>
+				Image path: <input type="text" name="image"></br>
+			    <input type="submit" value="Go" name="submit">
+			</form>
+		</div>
+	</body>
+
+</html>
