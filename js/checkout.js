@@ -124,8 +124,20 @@ $(document).ready(function(){
 			}
 		},
 		submitHandler: function(form) {
-				if(document.cookie!=""){
-				console.log("cookie not empty");
+				//if(document.cookie!=""){
+ 			if(cook_array[0]=="username"){
+			//console.log("cookie not empty");
+ 				dataString = 'userid=' + cook_array[1];
+ 			//console.log(dataString);
+ 				$.ajax({
+ 					type: "GET",
+ 			 		url: "php/order_cart_insert.php",
+ 			 		data: dataString,
+ 			 		dataType : "json",
+ 				 	success: function(data){
+ 				 		console.log("inside success function"+data);     
+ 	        		} 
+ 				});
 			}
 			else{
 				console.log("cookie empty");
