@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 		//console.log("signout now!");
 		deleteAllCookies();
-		window.location.replace("http://localhost:8888/PapaDominos/index.html");
+		window.location.replace("index.html");
 
 	});
 
@@ -43,7 +43,7 @@ $(document).ready(function(){
 	$.ajax({
 
 		type: "GET",
- 		url: "http://localhost:8888/PapaDominos/php/order_history.php",
+ 		url: "php/order_history.php",
  		data: dataString,
  		dataType : "json",
  		success: function(data){

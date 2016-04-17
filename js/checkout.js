@@ -38,7 +38,7 @@ $(document).ready(function(){
 			console.log("Values passed are "+email +pwd);
 			  $.ajax({
 		 		type: "POST",
-		 		url: "http://localhost:8888/PapaDominos/php/login_validate.php",
+		 		url: "php/login_validate.php",
 		 		data: dataString,
 		 		dataType : "json",
 		 		success: function(data){
@@ -63,7 +63,7 @@ $(document).ready(function(){
                      	document.cookie = "city="+city;
                      	document.cookie = "state="+state;
                      	document.cookie = "zip="+zip;
-                     	window.location.replace("http://localhost:8888/PapaDominos/checkout.html");
+                     	window.location.replace("checkout.html");
             		 }
             		 else{
             		 	console.log("Invalid email and pwd cmbination");
