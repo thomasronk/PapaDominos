@@ -141,7 +141,7 @@ $(document).ready(function(){
 			}
 			else{
 				console.log("cookie empty");
-				window.location.replace("http://localhost:8888/PapaDominos/order_complete.html");
+				window.location.replace("http://localhost/PapaDominos/order_complete.html");
 			}
  		 }
 	});

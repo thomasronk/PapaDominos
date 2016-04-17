@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 		//console.log("signout now!");
 		deleteAllCookies();
-		window.location.replace("http://localhost:8888/PapaDominos/index.html");
+		window.location.replace("index.html");
 
 	});
 

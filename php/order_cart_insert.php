@@ -1,12 +1,42 @@
 <?php
+session_start();
 
 include_once 'db_connect.php';
 $con = connect_db();
 
 
 $userid = $_GET['userid'];	//This is the user ID from the cookie
+$date = date("Y/m/d");
 
-echo json_encode($userid);
+try
+{
+    
+    if(isset($_SESSION['cart']))
+             {   
+                foreach ($_SESSION['cart'] as $item) 
+                     {
+                         
+                    
+                    $sql = "INSERT INTO order_history (UserID, DateofOrder, ItemName, Qty, Price) VALUES ('$userid', '$date', '$item[0]', '$item[1]', '$item[2]')";
+  	                $con->exec($sql);
+                    $success=1;
+  	                $message = "success";
+                            
+                     }
+                           			
+              }
+                       
+}
+catch ( PDOException $exception )
+{
+    $success=0;
+    $message = $exception->errorInfo[1];
+}
 
+
+echo json_encode(array(
+	 	"success"=>$success,
+	 	"message"=>$message
+	 	));
 
 ?>
