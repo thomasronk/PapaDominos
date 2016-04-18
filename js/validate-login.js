@@ -20,7 +20,7 @@ $(document).ready(function(){
 		 		success: function(data){
                      console.log(data);
                      if(data.success==1){
-                     	console.log(data.success);
+                     	//console.log(data.success);
                      	var username = data.username;
                      	var fullname = data.fullname;
                      	var phone = data.phone;
@@ -38,7 +38,14 @@ $(document).ready(function(){
                      	document.cookie = "city="+city;
                      	document.cookie = "state="+state;
                      	document.cookie = "zip="+zip;
-                     	window.location.replace("/PapaDominos/index.html");
+                        if(username=="admin@admin.com"){
+                           console.log("Admin login");
+                           window.location.replace("admin.html");
+                        }
+                        else{
+                     	  window.location.replace("index.html");
+                          console.log("customer login");
+                        }
                      	//console.log(document.cookie);
             		 }
             		 else{
