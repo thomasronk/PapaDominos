@@ -10,7 +10,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Cart | E-Shopper</title>
+        <title>Cart | Corleones</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -73,8 +73,6 @@ session_start();
                         <div class="col-sm-8">
                             <div class="shop-menu pull-right">
                                 <ul class="nav navbar-nav">
-                                    <li><a href=""><i class="fa fa-user"></i> Account</a></li>
-                                    <li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
                                     <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                     <li><a href="cart.html" class="active"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                     <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
@@ -203,6 +201,7 @@ session_start();
                              echo '<td class="cart_price"></td>' ;
                              echo '<td class="cart_quantity"><p>Total Price</p></td>' ;
                              echo '<td class="cart_total"><p class="cart_total_price">$'.$total_price.'</p></td>' ;
+                             //echo count($_SESSION['cart']);
                        }
                         else
                         {
