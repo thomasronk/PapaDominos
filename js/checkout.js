@@ -135,13 +135,14 @@ $(document).ready(function(){
  			 		data: dataString,
  			 		dataType : "json",
  				 	success: function(data){
- 				 		console.log("inside success function"+data);     
+ 				 		console.log("inside success function"+data); 
+ 				 		window.location.replace("order_complete.html");    
  	        		} 
  				});
 			}
 			else{
 				console.log("cookie empty");
-				window.location.replace("http://localhost/PapaDominos/order_complete.html");
+				window.location.replace("order_complete.html");
 			}
  		 }
 	});
