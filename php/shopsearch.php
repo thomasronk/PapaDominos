@@ -13,7 +13,12 @@
 	
 	
 	// the table name is "babynames"
-	$query = "SELECT * from PRODUCTS WHERE UPPER(name) LIKE UPPER('%{$name}%')";
+	if ($name == '*'){
+		$query = "SELECT * from PRODUCTS";
+	}
+	else{
+		$query = "SELECT * from PRODUCTS WHERE UPPER(name) LIKE UPPER('%{$name}%')";
+	}
 	$rows = $connection->query($query);
 	
 	
