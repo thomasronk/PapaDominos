@@ -98,8 +98,8 @@ $(document).ready(function(){
 				dataType : "json",
 				success: function(data){
                     if(data.success==1){
-                    	$("#successfulSpan").show();
-                    	window.location.replace("login.html");
+                    	//$("#successfulSpan").show();
+                    	window.location.replace("acc_succ_created.html");
 
                     }
                     else{
