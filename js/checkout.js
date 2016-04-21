@@ -79,6 +79,10 @@ $(document).ready(function(){
 			phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
 	}, "Please specify a valid phone number");
 
+	jQuery.validator.addMethod("zipcode", function(value, element) {
+  return this.optional(element) || /^\d{5}(?:-\d{4})?$/.test(value);
+}, "Please provide a valid zipcode.");
+
 
 	$("#acc-checkoutForm").validate({
 		rules:{
@@ -106,7 +110,8 @@ $(document).ready(function(){
 				required:true
 			},
 			card_no:{
-				required:true
+				required:true,
+				creditcard: true
 			},
 			security_code:{
 				required:true
@@ -115,7 +120,8 @@ $(document).ready(function(){
 				required:true
 			},
 			zip_card:{
-				required:true
+				required:true,
+				zipcode:true
 			}
 		},
 		messages:{
