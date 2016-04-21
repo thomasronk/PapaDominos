@@ -107,7 +107,8 @@ $(document).ready(function(){
 				required:true
 			},
 			field_zip:{
-				required:true
+				required:true,
+				zipcode:true
 			},
 			card_no:{
 				required:true,
