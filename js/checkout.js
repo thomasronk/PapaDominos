@@ -114,7 +114,8 @@ $(document).ready(function(){
 				creditcard: true
 			},
 			security_code:{
-				required:true
+				required:true,
+				number:true
 			},
 			name_card:{
 				required:true
