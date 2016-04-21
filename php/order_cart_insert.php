@@ -16,14 +16,15 @@ try
                 foreach ($_SESSION['cart'] as $item) 
                      {
                          
-                    
-                    $sql = "INSERT INTO order_history (UserID, DateofOrder, ItemName, Qty, Price) VALUES ('$userid', '$date', '$item[0]', '$item[1]', '$item[2]')";
+                    $price = $item[1]*$item[2];
+                    $sql = "INSERT INTO order_history (UserID, DateofOrder, ItemName, Qty, Price) VALUES ('$userid', '$date', '$item[0]', '$item[1]', '$price')";
   	                $con->exec($sql);
                     $success=1;
   	                $message = "success";
                             
                      }
-                           			
+                   
+        unset($_SESSION['cart']);
               }
                        
 }
