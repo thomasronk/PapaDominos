@@ -28,5 +28,5 @@ foreach ($_SESSION['cart'] as $item) {
 }
 
 
-header('Location: ../shop.html');
+header('Location: ../shop.php');
 ?>

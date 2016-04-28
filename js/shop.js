@@ -311,7 +311,13 @@ $(document).ready(function(){
 		});
 	}); // end of #all click function
 
-
+function callSearch() {
+     alert("Hello");
+}
+$( "#searchform" ).submit(function( event ) {
+ callSearch();
+ alert("Hello");
+});
 	$("#searchbutton").click(function(){
 
 
